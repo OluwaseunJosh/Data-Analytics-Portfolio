@@ -1,13 +1,17 @@
+/*
+Purpose: The purpose of this project is to know how customers utilizies each payment channel for their monthly repayments,
+and then to know which customers the business needs to promote a different payment channel to. Most Importantly, the business 
+needs to know who is qualified to be an owner based on the criteria set by the Business and those they need to give a discount offer.
+
+Result: This initiative lead to a 45% conversion of our inactive customers to owners.
+*/
+
 -- Customer Buyout report generation --
 
 SELECT *
 FROM
 (
-SELECT *, CASE
-		#WHEN Discount_rate = 0 AND Sep_paidperiod >= Expected_paidperiod THEN 'Promote_long_plan_Owner'
-		 
-		#WHEN Discount_rate = 0 AND Sep_paidperiod < Expected_paidperiod THEN 'Promote_long_plan'
-			
+SELECT *, CASE	
 		WHEN Sep_paidperiod >= Expected_paidperiod AND MTN_Airtime_payment <=0 THEN 'Eligible'
 				
 		WHEN Sep_paidperiod >= Expected_paidperiod AND MTN_Airtime_payment > 0 AND MTN_Airtime_paidperiod < Sep_paidperiod THEN 'Mixed_Payment'
@@ -133,7 +137,4 @@ GROUP BY B.`contract`, B.`crmcontract`, B.`created_date`, B.`customer_name`, B.`
 )END
 ) DAY
 
-WHERE Eligibility_Status = 'Eligible' OR Eligibility_Status = 'Mixed_Payment' OR Eligibility_Status = 'Full_Airtime_Payment' OR Eligibility_Status = 'Signing up for a payment plan till Dec 31st'
-
-
-
+WHERE Eligibility_Status = 'Eligible' OR Eligibility_Status = 'Mixed_Payment' OR Eligibility_Status = 'Full_Airtime_Payment' OR Eligibility_Status = 'Signing up for a payment plan till Dec 31st';
