@@ -3,8 +3,8 @@ SET @var1 := NULL;
 SET @var1 = CURRENT_DATE - INTERVAL 1 DAY;
 
 
-#Creating LCP Repayment Analysis Table.
-DROP TABLE `LCP_Repayment_Analysis`;
+-- Creating LCP Repayment Analysis for Dashboard Creation.
+-- DROP TABLE `LCP_Repayment_Analysis`;
 
 CREATE TABLE `LCP_Repayment_Analysis` AS 
 
