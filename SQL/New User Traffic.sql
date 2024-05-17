@@ -1,3 +1,9 @@
+/*
+Purpose: This project seeks to know movements of customers making use of business preferred payment channels for the first time
+in 6 Months.
+
+*/
+
 -- Generating the New User Analysis Report --
 SELECT a.*,`generation`, `Required_Status`
 
