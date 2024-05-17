@@ -1,9 +1,11 @@
 /*
-Purpose: The purpose of this project is to know how customers utilizies each payment channel for their monthly repayments,
-and then to know which customers the business needs to promote a different payment channel to. Most Importantly, the business 
-needs to know who is qualified to be an owner based on the criteria set by the Business and those they need to give a discount offer.
+Purpose: The purpose of this project is to understand how customers utilize each payment channel 
+for their monthly repayments and identify which customers the business should promote to use different 
+payment channels. Additionally, it aims to determine which customers qualify for ownership based on 
+business criteria and those who should receive discount offers.
 
-Result: This initiative lead to a 45% conversion of our inactive customers to owners.
+Result: This initiative resulted in a 45% conversion rate of inactive customers to owners. and a 20% increase
+in the business most preferred payment channel.
 */
 
 -- Customer Buyout report generation --
