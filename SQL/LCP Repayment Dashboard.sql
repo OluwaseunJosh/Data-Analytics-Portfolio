@@ -1,4 +1,14 @@
-#Declearing Variable
+/*
+Purpose: The purpose of this script is to retrieve and analyze customer payment behavior as part of a dashboard 
+creation project.
+
+Result: This project enabled the business to know "On time payments, Delay Payments, Defaulters and Panalty" and 
+their percentages in comparism to the overal repayment base. The resulting Dashboard as a result of this project enables 
+the business to continue making
+Data-Driven Decision.
+*/
+
+-- Declearing Variable --
 SET @var1 := NULL;
 SET @var1 = CURRENT_DATE - INTERVAL 1 DAY;
 
